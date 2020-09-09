@@ -62,6 +62,10 @@ const renderTweets = (tweetData) => {
 }
 $( document ).ready(function() {
   renderTweets(data);
+  $.ajax({url: '/tweets' , method: 'POST', successs: (response) =>{
+    console.log("it worked")
+    console.log(response)
+  }})
 });
 
 
