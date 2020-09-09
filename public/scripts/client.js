@@ -56,16 +56,18 @@ const createTweetElement = (userData) => {
 const renderTweets = (tweetData) => {
   for (let tweet of tweetData) {
     const newTweet = createTweetElement(tweet)
-    console.log(newTweet)
     $('#tweets-container').append(newTweet);
   }
 }
 $( document ).ready(function() {
   renderTweets(data);
-  $.ajax({url: '/tweets' , method: 'POST', successs: (response) =>{
-    console.log("it worked")
-    console.log(response)
-  }})
+  $(".new-tweet-form").on("submit", function(event){
+   event.preventDefault()
+    $.ajax({url: '/tweets' , method: 'POST', data: $(this).serialize(), success: (response) =>{
+      console.log("it worked")
+      console.log(response)
+    }});
+  });
 });
 
 
