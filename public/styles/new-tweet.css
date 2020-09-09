@@ -1,0 +1,62 @@
+main div button {
+  background-color: navy;
+  color: white;
+  font-family: Bungee;
+}
+main form button {
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 4px 0;
+}
+
+main form div {
+  display: flex;
+  justify-content: space-between;
+}
+#tweet-text {
+  border: none;
+  background: transparent;
+ border-bottom: 5px solid black;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+}
+.new-tweet {
+  width: 100%;
+}
+article {
+  background-color: white;
+  border: 5px solid black;
+}
+article header {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  height: min-content;
+  
+}
+.email{
+  visibility: hidden;
+}
+
+article:hover .email {
+  visibility: visible;
+  
+}
+.photo {
+  display:flex;
+  justify-content: space-between; 
+}
+.profile{
+  width: 40%;
+  height: 40%;
+}
+article footer.days-imgs {
+  display: flex;
+  justify-content: space-between;
+}
+article div.message {
+  border-bottom: solid black 4px ;
+  margin: 1cm;
+}
