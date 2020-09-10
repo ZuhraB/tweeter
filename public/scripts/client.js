@@ -46,17 +46,18 @@ $( document ).ready(function() {
   $(".new-tweet-form").on("submit", function(event){
    event.preventDefault();
    const tweetText = $("#tweet-text").val()
-   if (tweetText.length > 0 && tweetText.length <= 140) {
+   //if (tweetText.length > 0 && tweetText.length <= 140) {
+     if (validateTweet(tweetText))
      $.ajax({url: '/tweets' , method: 'POST', data: $(this).serialize()}).then(response =>{
        loadTweets();
      }).catch(e => {
        alert("Somthing went wrong!!")
      })
-  } else if (tweetText.length > 140) {
-    alert ("You just hit the maximum limit!!!")
-  } else {
-    alert ("Please tweet!!")
-  }
+  // } else if (tweetText.length > 140) {
+  //   alert ("You just hit the maximum limit!!!")
+  // } else {
+  //   alert ("Please tweet!!")
+  // }
   });
   const loadTweets = () => {
     $.ajax({url: ' http://localhost:8080/tweets' , method: 'GET'}).then(response =>{
@@ -65,6 +66,27 @@ $( document ).ready(function() {
   }
   loadTweets();
 });
+
+
+const validateTweet =function(netText) {
+
+  const message = $(".validate-new-tweet");
+  if (netText.length === 0) {
+    message.addClass("new-tweet-error-message");
+    message.netText("Apparently you forgot to tweet, please tweet!");
+    return;
+  }
+  else if (netText.length > 140) {
+    message.addClass("new-tweet-error-message");
+    message.netText("You have exceeded the maximum limit");
+    return;
+  }
+  else {
+    message.removeClass("new-tweet-error-message");
+    return true;
+  }
+
+}
 
 
 
