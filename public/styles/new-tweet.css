@@ -60,3 +60,8 @@ article div.message {
   border-bottom: solid black 4px ;
   margin: 1cm;
 }
+.new-tweet-error-message {
+  
+  color: #ff2020;
+  font-style: italic; 
+}
