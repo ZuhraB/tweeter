@@ -39,14 +39,19 @@ const renderTweets = (tweetData) => {
 $( document ).ready(function() {
   $(".new-tweet-form").on("submit", function(event){
    event.preventDefault()
-    $.ajax({url: '/tweets' , method: 'POST', data: $(this).serialize(), success: (response) =>{
+    $.ajax({url: '/tweets' , method: 'POST', data: $(this).serialize()}).then(response =>{
+      if (response.length > 0 && response.length <= 140) {
       loadTweets();
-    }});
+      } else if (response.length > 140) {
+        alert ("You just hit the maximum limit!!!")
+      } 
+    }).catch(e => {
+      alert("Somthing went wrong, you might have forgot to tweet!!")
+    })
   });
   const loadTweets = () => {
     $.ajax({url: ' http://localhost:8080/tweets' , method: 'GET'}).then(response =>{
       renderTweets(response)
-      console.log(response)
       })
   }
   loadTweets();
