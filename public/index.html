@@ -32,9 +32,10 @@
       <span class="write-tweet"> <b>write</b> a new tweet</span>
     </div>
     </nav>
-    <header>
+    <div class="head-main-div">
+    <header class="name-profile-pic" >
       <div>
-          <img class="Photo" src="/images/profile-hex.png"> 
+          <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
@@ -45,7 +46,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form class="new-tweet-form" method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -60,5 +60,6 @@
         </div>
       </section>
     </main>
+  </div>
   </body>
 </html>

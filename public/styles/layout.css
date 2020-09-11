@@ -36,4 +36,19 @@ body {
   margin:auto;
  }
 
-@media 1024px
+@media all and (min-width: 768px ) {
+  
+  .head-main-div {
+    display: flex;
+    margin: 90px 60px;
+    justify-content: space-between;
+  }
+  .name-profile-pic {
+    max-width: 35%;
+  }
+  .container {
+    width: 60%;
+    margin: 115px 0 0 0;
+  } 
+}
+

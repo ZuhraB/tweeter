@@ -1,11 +1,10 @@
-header {
+.name-profile-pic {
   height: 400px;
   width: 100%;
-  background-color:lightsalmon;
+  background-color:#CC882C;
   margin-top: 120px;
-  
 }
-header div {
+.name-profile-pic div {
   display: flex;
   justify-content: center;
 }
