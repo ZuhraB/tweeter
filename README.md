@@ -1,8 +1,7 @@
-# Tweeter Project
+# Tweeter Project by Zuhra Bakhshi
 
 Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+The  developer tools used are HTML, CSS, JS, jQuery and AJAX  Node, Express and MongoDB back-end skills.
 
 ## Getting Started
 
@@ -17,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 - chance
 - express
 - md5
+# This is how the final project looks like
+!["Screenshot of the laptop view of the tweeter app"](https://github.com/ZuhraB/tweeter/blob/master/docs/Laptop-view.png?raw=true)
+!["This is how the bottom of the page looks"](https://github.com/ZuhraB/tweeter/blob/master/docs/bottom-of-websit.png?raw=true)
+!["Screenshot of how will the app look on smaller devices, like an Iphone"](https://github.com/ZuhraB/tweeter/blob/master/docs/view-with-smaller-devices.png?raw=true)
+
