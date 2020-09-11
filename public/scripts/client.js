@@ -10,8 +10,8 @@ $(document).ready(function () {
     const tweetText = $("#tweet-text").val();
     if (validateTweet(tweetText)) {
       $.ajax({
-        url: '/tweets',
-        method: 'POST',
+        url: "/tweets",
+        method: "POST",
         data: $(this).serialize()
       }).then(() => {
         return loadTweets();
