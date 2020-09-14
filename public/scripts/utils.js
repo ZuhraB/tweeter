@@ -44,7 +44,7 @@ export function createTweetElement(userData) {
       <p>${escape(userData.content.text)}</p>
     </div>
     <footer class="days-imgs">
-      <p class="days">  ${userData.created_at} </p>
+      <p class="days"> Created at:  ${new Date(userData.created_at).toLocaleString().split(',')[0]} </p>
       <div>
         <img src="photos/flag-alt-solid-24.png" alt="Flag this tweet icon" role="button">
         <img src="photos/heart-solid-24.png" alt="Favourite this tweet icon" role="button">
