@@ -1,7 +1,7 @@
 # Tweeter Project by Zuhra Bakhshi
 
 Tweeter is a simple, single-page Twitter clone.
-The  developer tools used are HTML, CSS, JS, jQuery and AJAX  Node, Express and MongoDB back-end skills.
+The  developer tools used are HTML, CSS, JS, jQuery and AJAX  Node, Express back-end skills.
 
 ## Getting Started
 
